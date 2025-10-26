@@ -28,7 +28,8 @@ const Home = () => {
                         <hr/>
                     </div>
                 </div>
-                <div className="contacts">
+            </main>
+            <footer className="contacts">
                     <h2>How to reach me?</h2>
                     <ul>
                         <li>
@@ -56,9 +57,7 @@ const Home = () => {
                             </a>
                         </li>
                     </ul>
-                </div>
-            </main>
-            <footer></footer>
+                </footer>
         </>
     );
 };

@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.skills-section {
+  font-family: "Poppins", sans-serif;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.skills-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0056b3, #38bdf8);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid transparent;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-top: 4px solid #0056b3;
+  box-shadow: 0 12px 25px rgba(0, 86, 179, 0.15);
+}
+
+.skill-category {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.skill-tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.skill-tag {
+  background: linear-gradient(120deg, #e8f3ff, #f3f9ff);
+  color: #0056b3;
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 86, 179, 0.15);
+}
+
+.skill-tag:hover {
+  background: linear-gradient(120deg, #0056b3, #007be0);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.2);
+}
+
+.skill-card::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle at center, rgba(0, 86, 179, 0.08), transparent 70%);
+  transform: rotate(30deg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    gap: 1.5rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem;
+  }
+
+  .skill-category {
+    text-align: center;
+  }
+
+  .skill-tags {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    justify-items: center;
+  }
+}
