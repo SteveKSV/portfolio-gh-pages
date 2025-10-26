@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio-gh-pages">
       <div className="App">
         <Header />
         <Routes>
