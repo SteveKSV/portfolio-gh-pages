@@ -24,26 +24,8 @@ const Header = () => {
                 <NavLink to="/" className="header-logo">
                     SteveKSV
                 </NavLink>
-                <nav className="header-nav desktop-nav">
-                    <ul className="header-nav-list">
-                        <li className="header-nav-item">
-                            <NavLink to="/" className={getLinkClassName}>
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className="header-nav-item">
-                            <NavLink to="/projects" className={getLinkClassName}>
-                                Projects
-                            </NavLink>
-                        </li>
-                        <li className="header-nav-item">
-                            <NavLink to="/skills" className={getLinkClassName}>
-                                Core Skills
-                            </NavLink>
-                        </li>
-                    </ul>
-                </nav>
-
+                
+                {/* Hamburger Button */}
                 <button 
                     onClick={toggleMenu} 
                     className={`hamburger-icon ${isMenuOpen ? 'active' : ''}`}
@@ -53,8 +35,9 @@ const Header = () => {
                     <span></span>
                     <span></span>
                 </button>
-                
-                <nav className={`header-nav mobile-nav ${isMenuOpen ? 'active' : ''}`}>
+
+                {/* Single Navigation that changes based on screen size */}
+                <nav className={`header-nav ${isMenuOpen ? 'active' : ''}`}>
                     <ul className="header-nav-list">
                         <li className="header-nav-item">
                             <NavLink to="/" className={getLinkClassName} onClick={handleLinkClick}>

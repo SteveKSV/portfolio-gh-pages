@@ -46,7 +46,8 @@ h1 {
 .profile-image-container {
     position: absolute;
     left: 20px;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 230px;
     height: 230px;
 }
@@ -193,11 +194,13 @@ hr {
     }
 
     .profile-section {
-        padding: 200px 20px 0;
+        padding: 220px 20px 0;
         min-height: auto;
+        margin-top: 2rem;
     }
 
     .profile-image-container {
+        position: absolute;
         left: 50%;
         top: 0;
         transform: translateX(-50%);
