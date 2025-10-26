@@ -1,0 +1,220 @@
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #555;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+.bio {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    text-align: right;
+    padding: 0 20px;
+}
+
+/* For better paragraph spacing if there are multi paragraphs */
+.bio p {
+    margin-bottom: 1.2em;
+}
+
+/* Profile section */
+.profile-section {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding-left: 280px;
+    min-height: 250px;
+}
+
+.profile-image-container {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 230px;
+    height: 230px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid #fff;
+}
+
+.profile-content {
+    width: 100%;
+}
+
+.profile-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+.profile-content .description {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-content .bio {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    margin: 1.5rem 0;
+    text-align: justify;
+}
+
+/* Standardized dividers */
+hr {
+    width: 100%;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+/* Contacts section */
+.contacts {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.contacts h2 {
+    margin-bottom: 3rem;
+    color: #333;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.contacts ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(1rem, 3vw, 2rem);
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contacts li {
+    list-style: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+.contacts li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contacts li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: clamp(0.5rem, 2vw, 1rem);
+    transition: all 0.3s ease;
+    gap: 0.8rem;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: #0056b3;
+}
+
+.contact-text {
+    color: #333;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    white-space: nowrap;
+}
+
+.contacts li a:hover .contact-icon,
+.contacts li a:hover .contact-text {
+    color: #0056b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        margin-top: 100px;
+    }
+
+    .contacts ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contacts li {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contacts li a {
+        justify-content: flex-start;
+        padding: 0.8rem;
+    }
+
+    .contact-icon {
+        font-size: 1.5rem;
+        min-width: 24px;
+    }
+
+    .contact-text {
+        font-size: 1.1rem;
+    }
+
+    .profile-section {
+        padding: 200px 20px 0;
+        min-height: auto;
+    }
+
+    .profile-image-container {
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-content h1,
+    .profile-content .description,
+    .profile-content .bio {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image-container {
+        width: 150px;
+        height: 150px;
+    }
+}
