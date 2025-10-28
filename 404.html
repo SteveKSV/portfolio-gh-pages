@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/portfolio-gh-pages/" />
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      // Redirect to index.html but preserve the current path
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      // Adjust for your repo name
+      var repo = '/portfolio-gh-pages';
+      // Strip the repo prefix from the path if present
+      if (path.startsWith(repo)) {
+        path = path.substring(repo.length);
+      }
+      // Build redirect URL with original path encoded in query
+      window.location.replace(repo + '/?redirect=' + encodeURIComponent(path + search + hash));
+    </script>
   </head>
   <body></body>
 </html>
